@@ -1,14 +1,12 @@
-import Title from '@/components/Title';
+/* eslint-disable prettier/prettier */
+import Layout from '@/components/layout';
 
-export default function Home() {
+function Home() {
   return (
-    <main>
-      <Title>Hello TypeScript!</Title>
-      <p>A TypeScript starter for Gatsby. Great for advanced users.</p>
-      <p>
-        Follow me on Twitter (
-        <a href="https://twitter.com/jpedroschmitz">@jpedroschmitz</a>)
-      </p>
-    </main>
+    <Layout>
+      <section></section>
+    </Layout>
   );
 }
+
+export default Home;

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Fira+Mono:wght@400;500;700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  #root {
+    font-size: 62.5%;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  body {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    /* height: 100%;  */
+    /* width: 100%; */
+    font-family: 'Montserrat', sans-serif;
+    @apply text-gray-400 bg-primary-500;
+  }
+}
+
+@layer utilities {
+  .layout {
+    display: grid;
+    grid-template-columns:
+      [full-start]minmax(2rem, 1fr)
+      [center-start]repeat(
+        8,
+        [col-start] minmax(min-content, 12.5rem) [col-end]
+      )
+      [center-end]
+      minmax(2rem, 1fr) [full-end];
+    padding: 2rem 2rem;
+  }
+  
+  .navbar--layout {
+    @apply px-8 py-6 flex-between 
+  }
+  
+  .flex-between {
+    @apply flex justify-between items-center
+  }
+  
+  @media screen and (min-width: 768px) {
+    .layout {
+      grid-template-columns:
+        [sidebar1-start] 10rem
+        [sidebar1-end full-start]minmax(2rem, 1fr)
+        [center-start]repeat(
+          8,
+          [col-start] minmax(min-content, 12.5rem) [col-end]
+        )
+        [center-end]
+        minmax(2rem, 1fr) [full-end sidebar2-start]
+        10rem[sidebar2-end];
+    }
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply fixed top-0 left-0 right-0 z-40 bg-primary-500; 
+  }
+
+  .logo {
+    @apply text-secondary-500 text-3xl rounded-full border-secondary-500 border-solid 
+    border-2 p-4;
+  }
+    
+  .nav-link__text--active {
+    @apply after:translate-x-0; 
+  }
+  
+  .nav-link__num {
+    @apply text-secondary-500 mr-3
+  }
+}
