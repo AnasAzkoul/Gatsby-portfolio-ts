@@ -4,15 +4,18 @@ import { Link } from 'gatsby';
 import useSelectCurrentSection from '@/hooks/useSelectCurrentSection';
 import { setCurrentSection, closeSideNav } from '@/app/features/UISlice';
 import { Sections } from '@/Utils/types';
+import AnimatedDiv from '../animated-div';
+
 
 type Props = {
   item: NavLinkType;
   linkId: string;
   variant?: 'mobile' | 'desktop';
+  delay: number
 };
 
-const NavLink = ({ item, linkId, variant }: Props) => {
-  const { dispatch } = useSelectCurrentSection();
+const NavLink = ({ item, linkId, variant, delay }: Props) => {
+  const { dispatch, currentSection } = useSelectCurrentSection();
 
   const variantStyles =
     variant === `mobile`
@@ -25,21 +28,23 @@ const NavLink = ({ item, linkId, variant }: Props) => {
   };
 
   return (
-    <li className={`font-links capitalize`} onClick={handleClick}>
-      <Link
-        to={`/#${linkId}`}
-        className={`flex items-center py-4 px-8 ${variantStyles}`}
-      >
-        <span
-          className={`text-secondary-500 mr-3 text-links text-center ${
-            variant === `mobile` ? `mb-3` : ``
-          }`}
+    <AnimatedDiv axis='x' direction={0} delay={delay}>      
+      <li className={`font-links capitalize`} onClick={handleClick}>
+        <Link
+          to={`/#${linkId}`}
+          className={`flex items-center py-4 px-8 ${variantStyles}`}
         >
-          0{item.id}.
-        </span>
-        <span className="text-links">{item.text}</span>
-      </Link>
-    </li>
+          <span
+            className={`text-secondary-500 mr-3 text-links text-center ${
+              variant === `mobile` ? `mb-3` : ``
+            }`}
+          >
+            0{item.id}.
+          </span>
+          <span className={`text-links hover:text-gray-300 ${currentSection === linkId && `text-gray-300`}`}>{item.text}</span>
+        </Link>
+      </li>
+    </AnimatedDiv>
   );
 };
 

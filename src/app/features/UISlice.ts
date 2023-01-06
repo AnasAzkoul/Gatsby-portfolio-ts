@@ -13,7 +13,7 @@ interface UIState {
 
 const initialState: UIState = {
   isOpen: false, 
-  currentSection: Sections.HOME, 
+  currentSection: Sections.ABOUTME, 
 }
 
 export const UISlice = createSlice({

@@ -2,7 +2,8 @@
 import Button from '.'; 
 
 type Props = {
-  styles?: string
+  styles?: string; 
+
 }
 
 const ResumeButton = ({styles}: Props) => {

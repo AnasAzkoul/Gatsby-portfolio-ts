@@ -33,10 +33,16 @@ module.exports = {
         }, 
       }, 
       fontFamily: {
-        'links': ["Fira Code", "Fira Mono", "Roboto Mono", "monospace"]
+        'links': ["Fira Code", "Fira Mono", "Roboto Mono", "monospace"], 
+        'heading': ['Open Sans', `sans-serif`], 
+        'para': ['Open Sans', `sans-serif`]
       }, 
       fontSize: {
-        'links': 'clamp(14px, 4vw, 18px)'
+        'links': 'clamp(1.4rem, 4vw, 1.6rem)', 
+        'h1': 'clamp(1.4rem, 4vw, 1.6rem)', 
+        'big-heading': 'clamp(4rem, 8vw, 8rem)', 
+        'para': 'clamp(1.6rem, 4vw, 1.8rem)', 
+        'section-title': 'clamp(2.6rem, 5vw, 3.2rem)'
       }
     },
   },

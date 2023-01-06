@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.1",
+    "framer-motion": "8.2.0",
     "gatsby": "5.3.3",
     "gatsby-plugin-pnpm": "1.2.10",
     "gatsby-plugin-portal": "1.0.7",
