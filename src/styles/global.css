@@ -39,7 +39,7 @@
   }
   
   .navbar--layout {
-    @apply px-8 py-6 flex-between 
+    @apply px-8 py-6 flex-between flex items-center
   }
   
   .flex-between {

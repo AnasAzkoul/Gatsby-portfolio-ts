@@ -1,4 +1,5 @@
-import type { NavLinkType } from '@/Utils/constants';
+/* eslint-disable prettier/prettier */
+import type {NavLinkType} from '@/Utils/constants';
 import { Link } from 'gatsby';
 import useSelectCurrentSection from '@/hooks/useSelectCurrentSection';
 import { setCurrentSection, closeSideNav } from '@/app/features/UISlice';
@@ -25,10 +26,13 @@ const NavLink = ({ item, linkId, variant }: Props) => {
 
   return (
     <li className={`font-links capitalize`} onClick={handleClick}>
-      <Link to={`/#${linkId}`} className={`flex ${variantStyles}`}>
+      <Link
+        to={`/#${linkId}`}
+        className={`flex items-center py-4 px-8 ${variantStyles}`}
+      >
         <span
-          className={`text-secondary-500 mr-3 text-links ${
-            variant === `mobile` && `mb-3`
+          className={`text-secondary-500 mr-3 text-links text-center ${
+            variant === `mobile` ? `mb-3` : ``
           }`}
         >
           0{item.id}.
