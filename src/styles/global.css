@@ -41,7 +41,7 @@
   .layout--main {
     grid-column: center-start / center-end;
     
-    @apply h-[100vh] flex flex-col items-start justify-center
+    @apply h-screen flex flex-col items-start justify-center
   }
   
   .navbar--layout {
