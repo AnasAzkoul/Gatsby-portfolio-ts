@@ -58,6 +58,12 @@
     @apply py-[6rem]
   }
   
+  .layout--aboutme-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 5rem;
+  }
+  
   @media screen and (min-width: 768px) {
     .layout {
       grid-template-columns:
@@ -90,5 +96,9 @@
   
   .nav-link__num {
     @apply text-secondary-500 mr-3
+  }
+  
+  .sudo-img {
+    @apply before:block before:absolute before:h-full before:w-full before:border-2 before:border-secondary-500 before:top-[20px] before:left-[20px] before:-z-50 before:rounded-lg hover:before:top-[10px] hover:before:left-[10px] before:transition-all before:duration-150 before:ease-out after:absolute after:h-full after:w-full after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-secondary-200/30 hover:after:hidden; 
   }
 }

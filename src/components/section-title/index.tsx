@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-// import AnimatedDiv from '../animated-div';
 
 type Props = {
   children: React.ReactNode;
