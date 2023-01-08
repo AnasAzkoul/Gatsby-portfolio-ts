@@ -1,17 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-import { useEffect } from 'react';
 import Layout from '@/components/layout';
 import Main from '@/components/main';
 import AboutMe from '@/components/aboutme';
-import {navigate} from 'gatsby';
-import { Sections } from '@/Utils/types';
+import {graphql} from 'gatsby';
 
-function Home() {
-  
-  useEffect(() => {
-    navigate(`#${Sections.ABOUTME}`); 
-  }, [])
-  
+interface HomePageProps {
+  data: Queries.HomePageQuery
+}
+
+function HomePage({data}: HomePageProps) {
+    
   return (
     <Layout>
       <Main />
@@ -20,4 +20,19 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
+
+export const query = graphql`
+ query HomePage {
+  site {
+    siteMetadata {
+      author
+      description
+      projects {
+        mainTechnolog
+        name
+      }
+    }
+  }
+ }
+`; 

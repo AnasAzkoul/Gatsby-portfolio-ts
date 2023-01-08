@@ -5,7 +5,8 @@ import Paragraph from '../paragaph';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { Sections } from '@/Utils/types';
-import { technologies } from '@/Utils/constants';
+import {technologies} from '@/Utils/constants';
+
 
 const AboutMe = () => {
 
@@ -52,7 +53,7 @@ const AboutMe = () => {
                 placeholder="dominantColor"
                 layout="constrained"
                 width={400}
-                height={400}
+                className='rounded-lg'
               />
             </div>
           </div>
