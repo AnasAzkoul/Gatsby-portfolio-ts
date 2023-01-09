@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
-import type {NavLinkType} from '@/Utils/constants';
+import type {NavLinkType} from '../../Utils/constants';
 import { Link } from 'gatsby';
-import useSelectCurrentSection from '@/hooks/useSelectCurrentSection';
-import { setCurrentSection, closeSideNav } from '@/app/features/UISlice';
-import { Sections } from '@/Utils/types';
+import useSelectCurrentSection from '../../hooks/useSelectCurrentSection';
+import { setCurrentSection, closeSideNav } from '../../app/features/UISlice';
+import { Sections } from '../../Utils/types';
 import AnimatedDiv from '../animated-div';
 
 

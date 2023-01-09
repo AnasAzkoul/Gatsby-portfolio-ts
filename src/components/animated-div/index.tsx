@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
 import { motion } from 'framer-motion'
-import {Sections} from '@/Utils/types';
-import useSelectCurrentSection from '@/hooks/useSelectCurrentSection';
-import { setCurrentSection } from '@/app/features/UISlice';
+import {Sections} from '../../Utils/types';
+import useSelectCurrentSection from '../../hooks/useSelectCurrentSection';
+import { setCurrentSection } from '../../app/features/UISlice';
 
 type Props = {
   children: React.ReactNode; 

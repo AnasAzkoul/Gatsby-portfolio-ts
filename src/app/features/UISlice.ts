@@ -2,9 +2,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit'; 
 import type {RootState} from '../../app/store';
-import { Sections } from '@/Utils/types';
-
-
+import { Sections } from '../../Utils/types';
 
 interface UIState {
   isOpen: boolean
@@ -13,7 +11,7 @@ interface UIState {
 
 const initialState: UIState = {
   isOpen: false, 
-  currentSection: Sections.ABOUTME, 
+  currentSection: Sections.HOME, 
 }
 
 export const UISlice = createSlice({

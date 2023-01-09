@@ -2,8 +2,10 @@
 import Logo from '../logo';
 import HamburgerButton from './HamburgerButton';
 import NavList from './NavList';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
-import useMediaQuery from '@/hooks/useMediaQuery';
+
+
 const Navbar = () => {
   const isMatch = useMediaQuery(`screen and (min-width: 768px)`);
 

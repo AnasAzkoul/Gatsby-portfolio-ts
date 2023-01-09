@@ -4,8 +4,8 @@ import SectionTitle from '../section-title';
 import Paragraph from '../paragaph';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IoMdArrowDropright } from 'react-icons/io';
-import { Sections } from '@/Utils/types';
-import {technologies} from '@/Utils/constants';
+import { Sections } from '../../Utils/types';
+import {technologies} from '../../Utils/constants';
 
 
 const AboutMe = () => {

@@ -2,7 +2,7 @@
 import ResumeButton from '../button/ResumeButton';
 import NavLink from './NavLink';
 import AnimatedDiv from '../animated-div';
-import { navLinks } from '@/Utils/constants';
+import { navLinks } from '../../Utils/constants';
 
 type Props = {
   variant: 'mobile' | 'desktop';

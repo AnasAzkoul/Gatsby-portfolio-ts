@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {HiBars3BottomRight} from 'react-icons/hi2'; 
-import useSelectIsOpen from '@/hooks/useIsOpen';
-import {openSideNav, closeSideNav} from '@/app/features/UISlice';
+import useSelectIsOpen from '../../hooks/useIsOpen';
+import {openSideNav, closeSideNav} from '../../app/features/UISlice';
 import {AiOutlineClose} from 'react-icons/ai'; 
 import AnimatedDiv from '../animated-div';
 

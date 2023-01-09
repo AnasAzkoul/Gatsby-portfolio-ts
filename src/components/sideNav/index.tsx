@@ -2,8 +2,8 @@
 import {createPortal} from 'react-dom'; 
 import HamburgerButton from '../navbar/HamburgerButton';
 import NavList from '../navbar/NavList';
-import useSelectIsOpen from '@/hooks/useIsOpen';
-import {closeSideNav} from '@/app/features/UISlice';
+import useSelectIsOpen from '../../hooks/useIsOpen';
+import {closeSideNav} from '../../app/features/UISlice';
 
 function SideNav() {
   const {isOpen, dispatch} = useSelectIsOpen(); 

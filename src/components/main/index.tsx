@@ -2,7 +2,7 @@
 import Button from '../button';
 import AnimatedDiv from '../animated-div';
 import {Link} from 'gatsby';
-import { Sections } from '@/Utils/types';
+import { Sections } from '../../Utils/types';
 
 const Main = () => {
   return (
