@@ -1,16 +1,12 @@
-/* eslint-disable prettier/prettier */
 import AnimatedDiv from '../animated-div';
 import SectionTitle from '../section-title';
 import Paragraph from '../paragaph';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { Sections } from '../../Utils/types';
-import {technologies} from '../../Utils/constants';
-
+import { technologies } from '../../Utils/constants';
 
 const AboutMe = () => {
-
-
   return (
     <AnimatedDiv as="section" id={Sections.ABOUTME} styles="layout--section">
       <AnimatedDiv axis="y" direction={50} delay={0}>
@@ -33,10 +29,13 @@ const AboutMe = () => {
               <Paragraph>
                 Here are a few technologies I have been working with recently:
               </Paragraph>
-              <ul className="grid grid-cols-2 gap-y-3 mt-10">
+              <ul className="grid grid-cols-2 gap-y-5 mt-10">
                 {technologies.map((item) => {
                   return (
-                    <li key={item.id} className="capitalize flex">
+                    <li
+                      key={item.id}
+                      className="capitalize flex font-para text-para"
+                    >
                       <IoMdArrowDropright className="mr-2 text-secondary-500" />
                       {item.text}
                     </li>
@@ -46,14 +45,14 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="relative max-w-[40rem] mx-auto self-start justify-self-end">
-            <div className="sudo-img">
+            <div className="sudo-img-before">
               <StaticImage
                 src="../../images/anasazkoul1.jpg"
                 alt="Anas Azkoul"
                 placeholder="dominantColor"
                 layout="constrained"
                 width={400}
-                className='rounded-lg'
+                className="rounded-lg"
               />
             </div>
           </div>

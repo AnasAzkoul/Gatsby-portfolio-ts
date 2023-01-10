@@ -38,65 +38,62 @@ module.exports = {
     //     path: `${__dirname}/src/images`,
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: `Fira Code`,
-              variants: [
-                `300`,
-                `400`,
-                `500`,
-                `600`,
-                `700`
-              ],
-            },
-            {
-              family: `Fira Mono`,
-              variants: [`400`,`500`, `700`],
-            },
-            {
-              family: `Inter`,
-              variants: [
-                `400`,
-                `500`,
-                `600`,
-                `700`,
-                `800`,
-                `900`
-              ],
-            },
-            {
-              family: `Open Sans`,
-              variants: [
-                `300`,
-                `400`,
-                `500`,
-                `600`,
-                `700`,
-                `800`
-              ],
-            },
-            {
-              family: `Roboto Mono`,
-              variants: [
-                `200`,
-                `300`,
-                `400`,
-                `500`,
-                `600`,
-                `700`
-              ],
-            },
-          ],
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-webfonts`,
+    //   options: {
+    //     fonts: {
+    //       google: [
+    //         {
+    //           family: `Fira Code`,
+    //           variants: [
+    //             `300`,
+    //             `400`,
+    //             `500`,
+    //             `600`,
+    //             `700`
+    //           ],
+    //         },
+    //         {
+    //           family: `Fira Mono`,
+    //           variants: [`400`,`500`, `700`],
+    //         },
+    //         {
+    //           family: `Inter`,
+    //           variants: [
+    //             `400`,
+    //             `500`,
+    //             `600`,
+    //             `700`,
+    //             `800`,
+    //             `900`
+    //           ],
+    //         },
+    //         {
+    //           family: `Open Sans`,
+    //           variants: [
+    //             `300`,
+    //             `400`,
+    //             `500`,
+    //             `600`,
+    //             `700`,
+    //             `800`
+    //           ],
+    //         },
+    //         {
+    //           family: `Roboto Mono`,
+    //           variants: [
+    //             `200`,
+    //             `300`,
+    //             `400`,
+    //             `500`,
+    //             `600`,
+    //             `700`
+    //           ],
+    //         },
+    //       ],
+    //     },
+    //   },
+    // },
   ],
   jsxRuntime: `automatic`,
 };
-
-
-

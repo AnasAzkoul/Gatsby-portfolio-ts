@@ -1,7 +1,5 @@
-/* eslint-disable no-undef */
-/* eslint-disable prettier/prettier */
-import {useStaticQuery, graphql} from 'gatsby'; 
-import {Helmet} from "react-helmet"
+import { useStaticQuery, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const query = graphql`
   query SEO {
@@ -12,22 +10,18 @@ const query = graphql`
       }
     }
   }
-`
-
+`;
 
 const SEO = () => {
-  
-  const {site} = useStaticQuery(query)
-  
+  const { site } = useStaticQuery(query);
+
   return (
     <Helmet
-      htmlAttributes={{lang: `en`}}
+      htmlAttributes={{ lang: `en` }}
       title={`${site.siteMetadata.title}`}
-      meta={[{name: `description`, content: site.siteMetadata.description}]}
-    >
-      
-    </Helmet>
-  )
-}
+      meta={[{ name: `description`, content: site.siteMetadata.description }]}
+    ></Helmet>
+  );
+};
 
-export default SEO
+export default SEO;

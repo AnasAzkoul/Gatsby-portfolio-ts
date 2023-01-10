@@ -1,13 +1,12 @@
-/* eslint-disable prettier/prettier */
-import {useAppSelector, useAppDispatch} from '../app/hooks';
-import {selectIsOpen} from '../app/features/UISlice';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { selectIsOpen } from '../app/features/UISlice';
 
 const useSelectIsOpen = () => {
-  const isOpen = useAppSelector(selectIsOpen); 
-  
-  const dispatch = useAppDispatch(); 
-  
-  return ({isOpen, dispatch}); 
-}
+  const isOpen = useAppSelector(selectIsOpen);
 
-export default useSelectIsOpen; 
+  const dispatch = useAppDispatch();
+
+  return { isOpen, dispatch };
+};
+
+export default useSelectIsOpen;

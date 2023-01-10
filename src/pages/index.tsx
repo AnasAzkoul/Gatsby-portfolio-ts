@@ -1,21 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-undef */
-/* eslint-disable prettier/prettier */
 import Layout from '../components/layout';
 import Main from '../components/main';
 import AboutMe from '../components/aboutme';
-import {graphql} from 'gatsby';
+import Projects from '../components/projects';
+import { graphql, PageProps } from 'gatsby';
 
-interface HomePageProps {
-  data: Queries.HomePageQuery
-}
-
-function HomePage({data}: HomePageProps) {
-    
+function HomePage({ data }: PageProps<Queries.HomePageQuery>) {
   return (
     <Layout>
       <Main />
       <AboutMe />
+      <Projects />
     </Layout>
   );
 }
@@ -23,16 +19,16 @@ function HomePage({data}: HomePageProps) {
 export default HomePage;
 
 export const query = graphql`
- query HomePage {
-  site {
-    siteMetadata {
-      author
-      description
-      projects {
-        mainTechnolog
-        name
+  query HomePage {
+    site {
+      siteMetadata {
+        author
+        description
+        projects {
+          mainTechnolog
+          name
+        }
       }
     }
   }
- }
-`; 
+`;
