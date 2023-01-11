@@ -1,4 +1,4 @@
-import { createPortal } from 'react-dom';
+import Portal from '../portal';
 import HamburgerButton from '../navbar/HamburgerButton';
 import NavList from '../navbar/NavList';
 import useSelectIsOpen from '../../hooks/useIsOpen';
@@ -9,8 +9,8 @@ function SideNav() {
 
   const sideNavStyles = `h-full w-2/3 bg-primary-500 drop-shadow-xl fixed right-0 bottom-0 z-[1000] transition-all duration-300 ease`;
 
-  return createPortal(
-    <>
+  return (
+    <Portal>
       <div
         className={`${
           isOpen &&
@@ -26,8 +26,7 @@ function SideNav() {
         <HamburgerButton variant="close" />
         <NavList variant="mobile" />
       </div>
-    </>,
-    document.getElementById(`portal`) as HTMLElement,
+    </Portal>
   );
 }
 
