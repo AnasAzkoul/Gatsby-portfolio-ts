@@ -45,6 +45,9 @@ module.exports = {
         'section-title': 'clamp(2.6rem, 5vw, 2.5rem)',
         'project-title': 'clamp(1.8rem, 4vw, 2.2rem)',
       },
+      screens: {
+        'xs': '400px'
+      }
     },
   },
   plugins: [],

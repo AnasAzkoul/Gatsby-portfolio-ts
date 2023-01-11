@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useEffect } from 'react';
 import { Sections } from '../../Utils/types';
 import SectionTitle from '../section-title';
@@ -17,15 +18,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <AnimatedDiv
-      as="section"
-      styles="layout--projects overflow-x-hidden"
-      id={Sections.PROJECTS}
-    >
+    <AnimatedDiv as="section" styles="layout--projects" id={Sections.PROJECTS}>
       <AnimatedDiv axis="y" direction={50} delay={0} styles="p-1">
         <SectionTitle number={3}>Projects</SectionTitle>
         <div className="md:flex">
-          <div className="flex md:flex-col md:mb-0 md:mr-16 mb-10 max-w-[30rem] md:max-w-max overflow-x-auto md:overflow-x-hidden">
+          <div className="flex md:flex-col md:mb-0 md:mr-16 mb-10 max-w-[25rem] xs:max-w-[35rem] sm:max-w-[45rem] md:w-[25rem] overflow-x-auto md:overflow-x-hidden">
             {projects.map((project) => {
               return (
                 <button
@@ -44,56 +41,58 @@ const Projects = () => {
               );
             })}
           </div>
-          <div className="relative w-full min-h-[20rem]">
+          <div className="relative w-full">
             {projects.map((project) => {
               return (
-                <div
-                  key={project.id}
-                  className={`absolute transition-opacity duration-700 ${
-                    project.name === currentProject
-                      ? `opacity-100`
-                      : `opacity-0`
-                  }`}
-                >
-                  <h3 className="text-project-title capitalize text-gray-300 mb-[3rem]">
-                    {project.title}
-                  </h3>
-                  <Paragraph styles="mb-[3rem]">
-                    {project.description}
-                  </Paragraph>
-                  <div className="">
-                    {project.stack.map((item, index) => {
-                      return (
-                        <span
-                          key={index}
-                          className="text-secondary-500 mr-10 capitalize text-[1.2rem]"
-                        >
-                          {item}
-                        </span>
-                      );
-                    })}
-                  </div>
-                  {project.name === currentProject && (
-                    <div className="flex gap-8 mt-8">
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <FiGithub className={iconStyles} />
-                      </a>
-                      <a
-                        href={project.links.liveVersion}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <FiExternalLink className={iconStyles} />
-                      </a>
+                currentProject === project.name && (
+                  <div
+                    key={project.id}
+                    className={`transition-opacity duration-700 ${
+                      project.name === currentProject
+                        ? `opacity-100`
+                        : `opacity-0`
+                    }`}
+                  >
+                    <h3 className="text-project-title capitalize text-gray-300 mb-[3rem]">
+                      {project.title}
+                    </h3>
+                    <Paragraph styles="mb-[3rem]">
+                      {project.description}
+                    </Paragraph>
+                    <div className="">
+                      {project.stack.map((item, index) => {
+                        return (
+                          <span
+                            key={index}
+                            className="text-secondary-500 mr-10 capitalize text-[1.2rem]"
+                          >
+                            {item}
+                          </span>
+                        );
+                      })}
                     </div>
-                  )}
-                </div>
+                    {project.name === currentProject && (
+                      <div className="flex gap-8 mt-8">
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FiGithub className={iconStyles} />
+                        </a>
+                        <a
+                          href={project.links.liveVersion}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FiExternalLink className={iconStyles} />
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                )
               );
             })}
           </div>
