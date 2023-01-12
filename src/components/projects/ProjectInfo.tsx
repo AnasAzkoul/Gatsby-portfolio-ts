@@ -1,6 +1,6 @@
 import Paragraph from '../paragaph';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import type { ProjectTypes } from '../../Utils/constants';
+import type { ProjectTypes } from '../../Utils/types';
 
 type Props = {
   project: ProjectTypes;
@@ -15,12 +15,12 @@ const ProjectInfo = ({ project }: Props) => {
       </h3>
       <Paragraph styles="mb-[3rem]">{project.description}</Paragraph>
 
-      <div className="">
+      <div className="flex flex-wrap leading-8">
         {project.stack.map((item, index) => {
           return (
             <span
               key={index}
-              className="text-secondary-500 mr-10 capitalize text-[1.2rem]"
+              className="text-secondary-500 mr-6 capitalize text-[1.2rem]"
             >
               {item}
             </span>
@@ -38,7 +38,7 @@ const ProjectInfo = ({ project }: Props) => {
           <FiGithub className={iconStyles} />
         </a>
         <a
-          href={project.links.liveVersion}
+          href={project.links.live}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => e.stopPropagation()}

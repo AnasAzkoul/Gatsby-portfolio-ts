@@ -1,5 +1,5 @@
 {
   "files.refactoring.autoSave": false,
-  "cSpell.words": ["anasazkoul"],
+  "cSpell.words": ["anasazkoul", "strapi"],
   "prettier.configPath": ".prettierrc"
 }

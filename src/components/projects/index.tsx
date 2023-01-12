@@ -5,11 +5,15 @@ import SectionTitle from '../section-title';
 import AnimatedDiv from '../animated-div';
 import useSelectCurrentProject from '../../hooks/useSelectCurrentProject';
 import { setCurrentProject } from '../../app/features/UISlice';
-import { projects } from '../../Utils/constants';
 import ProjectButton from './ProjectButton';
 import ProjectInfo from './ProjectInfo';
+import type { ProjectTypes } from '../../Utils/types';
 
-const Projects = () => {
+type Props = {
+  projects: ProjectTypes[];
+};
+
+const Projects = ({ projects }: Props) => {
   const { dispatch, currentProject } = useSelectCurrentProject();
 
   useEffect(() => {
@@ -30,7 +34,7 @@ const Projects = () => {
             {projects.map((project) => {
               return (
                 currentProject === project.name && (
-                  <ProjectInfo key={project.id} project={(project)} />
+                  <ProjectInfo key={project.id} project={project} />
                 )
               );
             })}

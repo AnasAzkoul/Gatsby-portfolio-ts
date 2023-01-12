@@ -1,6 +1,6 @@
 import useSelectCurrentProject from '../../hooks/useSelectCurrentProject';
 import { setCurrentProject } from '../../app/features/UISlice';
-import type { ProjectTypes } from '../../Utils/constants';
+import type { ProjectTypes } from '../../Utils/types';
 
 type Props = {
   project: ProjectTypes;
@@ -11,7 +11,6 @@ const ProjectButton = ({ project }: Props) => {
 
   return (
     <button
-      key={project.id}
       className={`flex justify-start pl-6 pr-12 py-6 text-[1.4rem] capitalize border-l-2 
                   transition-all duration-500 delay-100 whitespace-nowrap
                   ${
