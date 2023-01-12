@@ -10,14 +10,14 @@
 //   });
 // };
 
-// exports.createSchemaCustomization = ({ actions }) => {
-//   actions.createTypes(`
-//     type Site {
-//       siteMetadata: SiteMetadata!
-//     }
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type Site {
+      siteMetadata: SiteMetadata!
+    }
 
-//     type SiteMetadata {
-//       title: String!
-//     }
-//   `);
-// };
+    type SiteMetadata {
+      title: String!
+    }
+  `);
+};

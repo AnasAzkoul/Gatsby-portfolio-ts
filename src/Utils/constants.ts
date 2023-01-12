@@ -25,7 +25,7 @@ export const technologies = [
   { id: 12, text: `mongoDB` },
 ];
 
-export type Project = {
+export type ProjectTypes = {
   id: number;
   name: string;
   title: string;
@@ -37,7 +37,7 @@ export type Project = {
   };
 };
 
-export const projects: Project[] = [
+export const projects: ProjectTypes[] = [
   {
     id: 1,
     name: `ecogym`,
