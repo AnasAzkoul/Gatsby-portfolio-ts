@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer base {   
   ::-webkit-scrollbar{
     @apply w-3 h-2 bg-transparent
   }
@@ -68,13 +68,13 @@
   .layout--section{
     grid-column: center-start / center-end;
 
-    @apply py-[6rem]
+    @apply py-[6rem] md:py-[10rem]
   }
   
   .layout--projects {
     grid-column: center-start / 10;
 
-    @apply py-[6rem]
+    @apply py-[6rem] md:py-[10rem]
   }
   
   .layout--aboutme-content {

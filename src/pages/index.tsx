@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import Main from '../components/main';
 import AboutMe from '../components/aboutme';
 import Projects from '../components/projects';
+import Contact from '../components/contact';
 import {graphql, PageProps} from 'gatsby';
 import type {ProjectTypes} from '../Utils/types'; 
 
@@ -31,6 +32,7 @@ function HomePage({data}: PageProps<Queries.HomePageQuery>) {
       <Main />
       <AboutMe />
       <Projects projects={extractedProjects} />
+      <Contact />
     </Layout>
   );
 }

@@ -47,6 +47,13 @@ module.exports = {
       options: strapiConfig,
     },
     {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        url: `https://api.github.com/graphql`,
+        token: process.env.GITHUB_TOKEN,
+      },
+    },
+    {
       resolve: `gatsby-plugin-portal`,
       options: {
         key: `portal`,
