@@ -1,4 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable prettier/prettier */
 import Button from '../button';
+import Paragraph from '../paragaph';
 import AnimatedDiv from '../animated-div';
 import { Link } from 'gatsby';
 import { Sections } from '../../Utils/types';
@@ -17,16 +20,15 @@ const Main = () => {
         </div>
         <div>
           <h3 className="text-big-heading font-heading font-semibold">
-            {`I'm a web developer.`}
+            Welcome to my piece of the Web.
           </h3>
         </div>
         <div className="my-16 md:max-w-[60%]">
-          <p className="leading-8 md:leading-9 text-para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            rerum a dolor odit ut inventore eligendi possimus modi ratione.
-            Vitae quod officia saepe tempore, ipsum cumque quia nihil voluptates
-            deleniti.
-          </p>
+          <Paragraph styles="leading-8 md:leading-10 text-para">
+            I'm a self-taught web developer currently based in Bratislava.
+            I'm passionate about building things on the web.
+            My aim now is to become part of a team of professional developers.
+          </Paragraph>
         </div>
         <div>
           <Button>

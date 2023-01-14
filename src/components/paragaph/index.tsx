@@ -6,7 +6,11 @@ type Props = {
 };
 
 const Paragraph = ({ children, styles }: Props) => {
-  return <p className={`text-para my-4 font-para ${styles}`}>{children}</p>;
+  return (
+    <p className={`text-para my-4 font-para leading-8 md:leading-10 ${styles}`}>
+      {children}
+    </p>
+  );
 };
 
 export default Paragraph;

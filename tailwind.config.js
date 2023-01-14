@@ -42,7 +42,7 @@ module.exports = {
         h1: 'clamp(1.4rem, 4vw, 1.6rem)',
         'big-heading': 'clamp(4rem, 8vw, 8rem)',
         'smaller-heading': 'clamp(4rem, 5vw, 6rem)',
-        para: 'clamp(1.6rem, 4vw, 1.8rem)',
+        para: 'clamp(1.6rem, 4vw, 1.6rem)',
         'section-title': 'clamp(2.6rem, 5vw, 2.5rem)',
         'project-title': 'clamp(1.8rem, 4vw, 2.2rem)',
       },

@@ -14,20 +14,21 @@ const AboutMe = () => {
         <div className="md:layout--aboutme-content">
           <div className="flex flex-col mb-[4rem]">
             <Paragraph>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ea
-              inventore libero itaque amet id ipsam ipsa voluptatem ratione cum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
-              illo.
+              It was while working as an accountant in Damascus, automating
+              tasks using logic in Microsoft Excel that I first discovered how
+              powerful coding can be. From that moment I was hooked but then the
+              war came.
             </Paragraph>
             <Paragraph>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ea
-              inventore libero itaque amet id ipsam ipsa voluptatem ratione cum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
-              illo.
+              Nevertheless, it was always on my mind. And then in 2020, while
+              working as an English Teacher and with more time on my hands, I
+              decided to take a disciplined approach to developing my coding
+              skills.
             </Paragraph>
             <div>
               <Paragraph>
-                Here are a few technologies I have been working with recently:
+                Here are the main technologies I have been working with
+                recently:
               </Paragraph>
               <ul className="grid grid-cols-2 gap-y-5 mt-10">
                 {technologies.map((item) => {
