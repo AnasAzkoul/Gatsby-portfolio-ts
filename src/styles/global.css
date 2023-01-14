@@ -77,6 +77,12 @@
     @apply py-[6rem] md:py-[10rem]
   }
   
+  .layout--footer {
+    grid-column: center-start / center-end;
+    
+    @apply pt-[6rem] pb-2 md:pt-[10rem] md:pb-2
+  }
+  
   .layout--aboutme-content {
     display: grid;
     grid-template-columns: 3fr 2fr;

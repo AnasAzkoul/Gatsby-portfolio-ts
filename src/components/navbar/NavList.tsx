@@ -20,7 +20,7 @@ const NavList = ({ variant }: Props) => {
       <ul className={`flex ${variantStyles}`}>
         {navLinks.map((item) => {
           const linkId = item.text.replace(/\s/g, ``);
-          delay += 0.25;
+          delay += 0.15;
 
           return (
             <NavLink

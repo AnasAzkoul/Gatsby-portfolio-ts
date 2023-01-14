@@ -32,7 +32,7 @@ const Main = () => {
         </div>
         <div>
           <Button>
-            <Link to={Sections.ABOUTME}>check out my projects</Link>
+            <Link to={`#${Sections.PROJECTS}`}>check out my projects</Link>
           </Button>
         </div>
       </AnimatedDiv>

@@ -19,7 +19,9 @@ const Contact = () => {
           <span>What's Next?</span>
         </h2>
 
-        <h2 className="text-smaller-heading font-bold ">Get in touch.</h2>
+        <h2 className="text-smaller-heading font-bold whitespace-nowrap">
+          Get in touch.
+        </h2>
 
         <Paragraph styles="my-12 md:max-w-[70%] mx-auto">
           To say hello, or to discuss interesting internship or job
