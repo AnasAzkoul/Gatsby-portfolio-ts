@@ -17,9 +17,24 @@ const Footer = () => {
           </div>
         )}
 
-        <p className="text-gray text-2xl hover:text-secondary-500 cursor-pointer hover:-translate-y-1 active:translate-y-0 transition-all ease-in">
-          Built by Anas Azkoul
-        </p>
+        <div className="flex flex-col space-y-4 text-center text-xl">
+          <a
+            href="https://brittanychiang.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-secondary-500 transition-all duration-150 ease-in hover:-translate-y-2 active:translate-y-0"
+          >
+            Inspired by Brittany Chiang
+          </a>
+          <a
+            href="https://github.com/AnasAzkoul/Gatsby-portfolio-ts"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-secondary-500 transition-all duration-150 ease-in hover:-translate-y-1 active:translate-y-0"
+          >
+            Built by Anas Azkoul
+          </a>
+        </div>
       </AnimatedDiv>
     </footer>
   );

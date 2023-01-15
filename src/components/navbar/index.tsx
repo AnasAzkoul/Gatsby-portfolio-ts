@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar--layout">
-        <Logo />
+        <a href="#home">
+          <Logo />
+        </a>
         {isMatch ? (
           <NavList variant="desktop" />
         ) : (

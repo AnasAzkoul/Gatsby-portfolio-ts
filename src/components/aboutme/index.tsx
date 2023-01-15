@@ -8,9 +8,11 @@ import { technologies } from '../../Utils/constants';
 
 const AboutMe = () => {
   return (
-    <AnimatedDiv as="section" id={Sections.ABOUTME} styles="layout--section">
+    <section id={Sections.ABOUTME} className="layout--section">
       <AnimatedDiv axis="y" direction={50} delay={0}>
-        <SectionTitle number={2}>about me</SectionTitle>
+        <SectionTitle number={2} section={Sections.ABOUTME}>
+          about me
+        </SectionTitle>
         <div className="md:layout--aboutme-content">
           <div className="flex flex-col mb-[4rem]">
             <Paragraph>
@@ -59,7 +61,7 @@ const AboutMe = () => {
           </div>
         </div>
       </AnimatedDiv>
-    </AnimatedDiv>
+    </section>
   );
 };
 

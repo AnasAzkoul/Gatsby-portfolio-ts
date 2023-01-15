@@ -22,14 +22,10 @@ const Projects = ({ projects }: Props) => {
   }, []);
 
   return (
-    <AnimatedDiv
-      as="section"
-      styles="layout--projects mb-[4rem]"
-      id={Sections.PROJECTS}
-    >
+    <section className="layout--projects mb-[4rem]" id={Sections.PROJECTS}>
       <AnimatedDiv axis="y" direction={50} delay={0} styles="p-1">
         <div className="mb-[4rem]">
-          <SectionTitle number={3}>Projects</SectionTitle>
+          <SectionTitle number={3} section={Sections.PROJECTS}>Projects</SectionTitle>
           <Paragraph styles="mt-[-2rem]">
             These projects showcase the technologies I’ve worked with. More of
             my work can be seen on my {` `}
@@ -44,7 +40,7 @@ const Projects = ({ projects }: Props) => {
             </span>
             {` `}.
           </Paragraph>
-        </div>  
+        </div>
         <div className="md:flex">
           <div className="flex md:flex-col md:mb-0 md:mr-16 mb-10 max-w-[25rem] xs:max-w-[35rem] sm:max-w-[45rem] md:w-[25rem] overflow-x-auto md:overflow-x-hidden">
             {projects.map((project) => {
@@ -62,7 +58,7 @@ const Projects = ({ projects }: Props) => {
           </div>
         </div>
       </AnimatedDiv>
-    </AnimatedDiv>
+    </section>
   );
 };
 

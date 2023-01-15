@@ -1,12 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useRef, useEffect } from 'react';
+import { setCurrentSection } from '../../app/features/UISlice';
+import useSelectCurrentSection from '../../hooks/useSelectCurrentSection';
+import { useInView } from 'framer-motion';
 import AnimatedDiv from '../animated-div';
 import Paragraph from '../paragaph';
 import Button from '../button';
 import { Sections } from '../../Utils/types';
 
 const Contact = () => {
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef);
+  const { dispatch } = useSelectCurrentSection();
+
+  useEffect(() => {
+    if (isInView) {
+      dispatch(setCurrentSection(Sections.CONTACT));
+    }
+  }, [isInView, dispatch]);
+
   return (
-    <AnimatedDiv styles="layout--section" as="section" id={Sections.CONTACT}>
+    <section className="layout--section" id={Sections.CONTACT}>
       <AnimatedDiv
         as="div"
         axis="y"
@@ -19,7 +33,10 @@ const Contact = () => {
           <span>What's Next?</span>
         </h2>
 
-        <h2 className="text-smaller-heading font-bold whitespace-nowrap">
+        <h2
+          className="text-smaller-heading font-bold whitespace-nowrap"
+          ref={titleRef}
+        >
           Get in touch.
         </h2>
 
@@ -32,7 +49,7 @@ const Contact = () => {
           <a href="mailto:anas.azkoul@gmail.com">Say Hello</a>
         </Button>
       </AnimatedDiv>
-    </AnimatedDiv>
+    </section>
   );
 };
 
