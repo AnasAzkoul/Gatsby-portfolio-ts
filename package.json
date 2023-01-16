@@ -36,6 +36,8 @@
     "framer-motion": "8.2.0",
     "gatsby": "5.3.3",
     "gatsby-plugin-image": "3.3.2",
+    "gatsby-plugin-manifest": "5.4.0",
+    "gatsby-plugin-offline": "6.4.0",
     "gatsby-plugin-pnpm": "1.2.10",
     "gatsby-plugin-portal": "1.0.7",
     "gatsby-plugin-react-helmet": "6.3.0",

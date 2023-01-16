@@ -42,6 +42,14 @@ module.exports = {
         id: `portal`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon-32x32.png`,
+        theme_color_in_head: false,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
   jsxRuntime: `automatic`,
 };
